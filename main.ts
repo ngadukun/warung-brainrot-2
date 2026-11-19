@@ -5,6 +5,8 @@
 // point, not a winner: it is a grey square that moves with the arrow keys. Build your game, rebuild
 // game.rbxl, put your PNG or JPEG screenshots in screenshots/ (the first by name is the cover, and one of
 // them is the thumbnail you upload for your game on Roblox) and fill in PLAY.json with your published place.
+// Warung Brainrot's handover: the Rojo project below is a full 3D night-market game (see README.md), and
+// this program ships its place, sources, screenshots and play link exactly as the kit's starter does.
 //
 // Every name under /output starts with a letter, a digit or _ and holds only letters, digits, . _ and -: the
 // grader fails an entry whose output holds any other, so a file such as .gitkeep or .DS_Store copied in fails it.
@@ -33,6 +35,7 @@ if (existsSync(join(here, 'screenshots'))) cpSync(join(here, 'screenshots'), joi
 // The scorer's own caps (reference/gate.json): only text_max_bytes shapes the bytes; the others refuse an entry the
 // scorer would refuse (more than 4 screenshots or one over 256 KiB; a place of more than 500000 instances, whose
 // scripts' sources come to over 8 MiB or whose scripts' paths come to over 1048576 characters, in all).
+// Warung Brainrot sits far under every cap: fourteen scripts, a small place, three starter captures for now.
 writeFileSync(
   join(out, 'dossier.json'),
   buildDossier(out, { text_max_bytes: 65536, screenshots: { max: 4, max_bytes: 262144 }, max_instances: 500000, scripts_max_source_bytes: 8388608, scripts_max_path_chars: 1048576 }),
